@@ -117,5 +117,49 @@ end
 
 def are_you_playing_banjo(name)
     # Implement me!
-    return name
-  end
+    if name.match(/^r/) or name.match(/^R/)
+        return name + " plays banjo"
+    else
+        return name + " does not play banjo"
+    end
+end
+
+# Trolls are attacking your comment section!
+
+# A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+
+# Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+# For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+# Note: for this kata y isn't considered a vowel.
+
+def disemvowel(str)
+    vowels = Array.[]('a','e','i','o','u','A','E','I','O','U')
+
+    vowels.each do |vowel|
+        str = str.delete(vowel)
+    end
+
+    return str
+end
+
+# Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. 
+# However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
+
+# Your task is to write a function maskify, which changes all but the last four characters into '#'.
+
+# Examples (input --> output):
+
+# "4556364607935616" --> "############5616"
+#      "64607935616" -->      "#######5616"
+#                "1" -->                "1"
+#                 "" -->                 ""
+
+# // "What was the name of your first pet?"
+# "Skippy" --> "##ippy"
+# "Nananananananananananananananana Batman!" --> "####################################man!"
+
+def maskify(cc)
+    # your beautiful code goes here
+end
